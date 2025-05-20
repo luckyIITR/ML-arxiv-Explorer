@@ -8,5 +8,5 @@ def load_jsonl(path: str) -> List[Dict]:
 def save_embeddings(path: str, embeddings: List[List[float]], metadata: List[Dict]):
     with open(path, "w", encoding="utf-8") as f:
         for vec, meta in zip(embeddings, metadata):
-            entry = {"embedding": vec, "metadata": meta}
+            entry = {"embedding": vec.tolist(), "metadata": meta}
             f.write(json.dumps(entry) + "\n")

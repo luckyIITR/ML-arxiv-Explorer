@@ -3,7 +3,7 @@ import json
 from pathlib import Path
 
 def run_pipeline(file_path: str, output_path: str):
-    df = pd.read_csv(file_path)
+    df = pd.read_csv(file_path).iloc[:1000]
 
     entries = []
     for _, row in df.iterrows():
