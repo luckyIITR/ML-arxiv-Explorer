@@ -1,0 +1,7 @@
+data
+.virtual_documents
+.vscode
+.vscode-test
+.ipynb_checkpoints
+__pycache__
+*.pyc
